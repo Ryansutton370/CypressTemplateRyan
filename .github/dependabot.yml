@@ -22,16 +22,13 @@ updates:
       - "Ryansutton370"
     assignees:
       - "Ryansutton370"
-    # Group updates by dependency type
+    # Group updates by dependency type to reduce PR noise
     groups:
       cypress-dependencies:
         patterns:
           - "cypress*"
           - "@badeball/cypress-cucumber-preprocessor"
           - "@bahmutov/cypress-esbuild-preprocessor"
-      development-dependencies:
-        patterns:
-          - "*"
         update-types:
           - "minor"
           - "patch"

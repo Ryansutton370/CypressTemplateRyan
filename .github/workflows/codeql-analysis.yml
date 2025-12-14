@@ -21,8 +21,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'javascript', 'typescript' ]
+        language: [ 'javascript' ]
         # CodeQL supports: 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby', 'swift'
+        # Note: TypeScript is analyzed using the 'javascript' language setting
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
