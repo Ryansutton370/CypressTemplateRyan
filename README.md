@@ -2,15 +2,21 @@
 
 A comprehensive Cypress test automation framework using the Page Object Model (POM) pattern with Cucumber/Gherkin BDD syntax for both UI and API testing.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![CodeQL](https://github.com/Ryansutton370/CypressTemplateRyan/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Ryansutton370/CypressTemplateRyan/actions/workflows/codeql-analysis.yml)
+
 ## Table of Contents
 
 - [Overview](#overview)
 - [Project Structure](#project-structure)
 - [Architecture & Patterns](#architecture--patterns)
 - [Getting Started](#getting-started)
+- [Contributing](#contributing)
 - [How to Add New Tests](#how-to-add-new-tests)
 - [Configuration](#configuration)
 - [Running Tests](#running-tests)
+- [Security](#security)
+- [License](#license)
 
 ## Overview
 
@@ -114,6 +120,7 @@ The framework implements a layered action architecture:
 
 - Node.js (v14 or higher)
 - npm or yarn
+- Git
 
 ### Installation
 
@@ -129,6 +136,44 @@ Configure your test environments in the `.env` file:
 BASEURL=https://testautomationpractice.blogspot.com/
 API_BASEURL=https://playground.mockoon.com
 ```
+
+## Contributing
+
+We welcome contributions from the community! This repository is public and forkable, and the `main` branch is protected to ensure code quality and safety.
+
+### Quick Contribution Steps
+
+1. **Fork** this repository to your GitHub account
+2. **Clone** your fork to your local machine
+3. **Create a branch** for your changes (e.g., `feature/your-feature-name`)
+4. **Make your changes** and test them locally
+5. **Commit** your changes with signed commits (`git commit -s`)
+6. **Push** to your fork
+7. **Open a Pull Request** from your fork to this repository's `main` branch
+
+### Branch Protection
+
+The `main` branch is protected and requires:
+- Pull requests for all changes (no direct pushes, even for administrators)
+- At least one approving review from a CODEOWNER
+- All CI status checks to pass (tests and CodeQL security scanning)
+- Signed commits (DCO compliance)
+
+### Detailed Guidelines
+
+For detailed contribution guidelines, including:
+- Detailed fork and PR workflow
+- Branch naming conventions
+- Commit message format
+- Testing requirements
+- Code review process
+- Maintainer responsibilities
+
+Please see our **[CONTRIBUTING.md](CONTRIBUTING.md)** guide.
+
+### Code of Conduct
+
+This project adheres to a Code of Conduct. By participating, you are expected to uphold this code. Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details.
 
 ## How to Add New Tests
 
@@ -398,12 +443,25 @@ Scenario Outline: Test with multiple data sets
 6. **Use fixtures for test data**: Keep test data separate from test logic
 7. **Log important actions**: Use `cy.log()` for debugging and test reports
 
+## Security
+
+Security is important to us. If you discover a security vulnerability, please report it responsibly.
+
+- **Report vulnerabilities** via GitHub Security Advisories (preferred)
+- See [SECURITY.md](SECURITY.md) for detailed reporting instructions
+- Use the [Security tab](https://github.com/Ryansutton370/CypressTemplateRyan/security) to privately report issues
+
 ## Support
 
-For issues or questions about this template, please refer to the Cypress documentation:
-- [Cypress Documentation](https://docs.cypress.io/)
-- [Cucumber Preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor)
+For issues or questions about this template:
+- Open an [issue](https://github.com/Ryansutton370/CypressTemplateRyan/issues) for bugs or feature requests
+- Use the provided issue templates for bug reports and feature requests
+- Refer to the Cypress documentation:
+  - [Cypress Documentation](https://docs.cypress.io/)
+  - [Cucumber Preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor)
 
 ## License
 
-This is a template project for test automation purposes.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Copyright (c) 2025 Ryansutton370

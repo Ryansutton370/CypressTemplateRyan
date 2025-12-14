@@ -1,0 +1,58 @@
+version: 2
+updates:
+  # Enable updates for npm dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
+    target-branch: "main"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "npm"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    # Auto-merge configuration for minor and patch updates
+    # Note: Requires branch protection rules to be configured with required status checks
+    reviewers:
+      - "Ryansutton370"
+    assignees:
+      - "Ryansutton370"
+    # Group updates by dependency type
+    groups:
+      cypress-dependencies:
+        patterns:
+          - "cypress*"
+          - "@badeball/cypress-cucumber-preprocessor"
+          - "@bahmutov/cypress-esbuild-preprocessor"
+      development-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+
+  # Enable updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
+    target-branch: "main"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    reviewers:
+      - "Ryansutton370"
+    assignees:
+      - "Ryansutton370"
