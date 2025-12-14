@@ -1,0 +1,17 @@
+{
+  "cucumberautocomplete.steps": [
+    "cypress/support/step_definitions/**/*.ts"
+  ],
+  "cucumberautocomplete.syncfeatures": "cypress/integration/features/**/*.feature",
+  "cucumberautocomplete.strictGherkinCompletion": true,
+  "cucumberautocomplete.strictGherkinValidation": false,
+  "cucumberautocomplete.smartSnippets": true,
+  "cucumberautocomplete.stepsInvariants": true,
+  "cucumberautocomplete.customParameters": [],
+  "cucumber.features": [
+    "cypress/integration/features/**/*.feature"
+  ],
+  "cucumber.glue": [
+    "cypress/support/step_definitions/**/*.ts"
+  ]
+}
