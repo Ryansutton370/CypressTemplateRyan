@@ -2,9 +2,9 @@ name: "CodeQL Analysis"
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
   schedule:
     # Run CodeQL analysis weekly on Monday at 00:00 UTC
     - cron: '0 0 * * 1'
@@ -21,9 +21,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'javascript' ]
-        # CodeQL supports: 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby'
-        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+        language: ['javascript']
+        # CodeQL supports: 'cpp', 'csharp', 'go', 'java', 'javascript',
+        # 'python', 'ruby'
+        # Learn more about CodeQL language support at:
+        # https://aka.ms/codeql-docs/language-support
 
     steps:
     - name: Checkout repository
@@ -34,15 +36,21 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
-        # If you wish to specify custom queries, you can do so here or in a config file.
-        # By default, queries listed here will override any specified in a config file.
-        # Prefix the list here with "+" to use these queries and those in the config file.
-        
-        # Details on CodeQL's query packs refer to: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # If you wish to specify custom queries, you can do so here or in
+        # a config file. By default, queries listed here will override any
+        # specified in a config file. Prefix the list here with "+" to use
+        # these queries and those in the config file.
+
+        # Details on CodeQL's query packs refer to:
+        # https://docs.github.com/en/code-security/code-scanning/
+        # automatically-scanning-your-code-for-vulnerabilities-and-errors/
+        # configuring-code-scanning#using-queries-in-ql-packs
         # queries: security-extended,security-and-quality
 
-    # Autobuild attempts to build any compiled languages (C/C++, C#, Go, or Java).
-    # For JavaScript/TypeScript, this step is not strictly necessary but included for completeness
+    # Autobuild attempts to build any compiled languages
+    # (C/C++, C#, Go, or Java).
+    # For JavaScript/TypeScript, this step is not strictly necessary
+    # but included for completeness
     - name: Autobuild
       uses: github/codeql-action/autobuild@v3
 
