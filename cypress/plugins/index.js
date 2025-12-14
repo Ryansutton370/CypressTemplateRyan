@@ -12,5 +12,9 @@ module.exports = async (on, config) => {
 
   config.env.baseUrl = process.env.BASEURL;
 
+  // Skip scenarios with @ignore tag
+  config.env.filterSpecs = true;
+  config.env.omitFiltered = true;
+
   return config;
 };
