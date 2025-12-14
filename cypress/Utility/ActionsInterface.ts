@@ -10,6 +10,8 @@ export interface ActionsInterface {
   shouldBeVisible(locator: string): void;
   shouldNotExist(locator: string): void;
   selectOption(locator: string, value: string): void;
+  navigateToLink(locator: string): void;
+  clickContains(locator: string, text: string): void;
 }
 
 // Strongly-typed selector kinds to avoid magic strings throughout the codebase.
@@ -23,6 +25,8 @@ export enum ActionKind {
   ShouldBeVisible = 'shouldBeVisible',
   ShouldNotExist = 'shouldNotExist',
   SelectOption = 'selectOption',
+  NavigateToLink = 'navigateToLink',
+  ClickContains = 'clickContains',
 }
 
 /**
@@ -107,6 +111,25 @@ export class BaseActions implements ActionsInterface {
           cy.get('[role="option"]').contains(new RegExp(`^${value}$`, 'i')).click({ force: true });
         }
       });
+  }
+
+  navigateToLink(locator: string): void {
+    cy.log(`Navigate to link target${this.label ? ' (' + this.label + ')' : ''}: ${locator}`);
+    this.selectFn(locator).then(($el) => {
+      // Get href from the element or find parent link
+      let href = $el.attr('href');
+      if (!href) {
+        href = $el.closest('a').attr('href');
+      }
+      if (href) {
+        cy.visit(href);
+      }
+    });
+  }
+
+  clickContains(locator: string, text: string): void {
+    cy.log(`Click on${this.label ? ' (' + this.label + ')' : ''} containing "${text}": ${locator}`);
+    this.selectFn(locator).contains(text).first().click();
   }
 }
 

@@ -73,6 +73,14 @@ export class CommonActions {
         cy.log("Select option using: " + selectorType);
         act.selectOption(Locator, text);
       },
+      [ActionKind.NavigateToLink]: (act: ActionsInterface) => {
+        cy.log("Navigate to link using: " + selectorType);
+        act.navigateToLink(Locator);
+      },
+      [ActionKind.ClickContains]: (act: ActionsInterface) => {
+        cy.log("Click contains using: " + selectorType);
+        act.clickContains(Locator, text);
+      },
     };
 
     // Lookup the handler by the explicit actionKind and invoke it.
@@ -108,6 +116,14 @@ export class CommonActions {
 
   public static selectOption(Locator: string, value: string): void {
     this.getLocator(Locator, ActionKind.SelectOption, value);
+  }
+
+  public static navigateToLink(Locator: string): void {
+    this.getLocator(Locator, ActionKind.NavigateToLink);
+  }
+
+  public static clickContains(Locator: string, text: string): void {
+    this.getLocator(Locator, ActionKind.ClickContains, text);
   }
 
 }

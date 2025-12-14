@@ -46,3 +46,10 @@ Given("stop overriding page object", () => {
   CommonActions.stopOverrideLocator();
 });
 
+Then("navigate to {string} link target", (element: string) => {
+  CommonActions.navigateToLink(element);
+});
+
+Then("click on {string} that contains {string}", (locator: string, text: string) => {
+  CommonActions.clickContains(locator, text);
+});

@@ -1,15 +1,16 @@
 import { BasePage } from "cypress/PageObjects/BasePage";
 
-export class WikiArticlePage extends BasePage {
+export class WikipediaPage extends BasePage {
   protected static getCSSLocators(): Record<string, string> {
     return {
-      ArticleImage: "tr > td > span > a > .mw-file-element",
+      ArticleLinks: "ul > li > div > div > div > a",
     };
   }
 
   protected static getXPathLocators(): Record<string, string> {
     return {
       ArticleHeading: "//h1",
+      ArticleTopImage: "(//table//img)[1]"
     };
   }
 }

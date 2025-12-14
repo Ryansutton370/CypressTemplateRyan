@@ -1,5 +1,5 @@
 import { AutomationTestHomePage } from "../PageObjects/AutomationTestHomePage";
-import { WikiArticlePage } from "../PageObjects/WikiArticlePage";
+import { WikipediaPage } from "../PageObjects/WikipediaPage";
 
 
 /**
@@ -10,7 +10,8 @@ import { WikiArticlePage } from "../PageObjects/WikiArticlePage";
 export class LocatorService {
   private static pageMap = new Map<string, any>([
     ["", AutomationTestHomePage],
-    ["wiki", WikiArticlePage],
+    ["w", WikipediaPage],
+    ["wiki", WikipediaPage],
     
   ]);
 

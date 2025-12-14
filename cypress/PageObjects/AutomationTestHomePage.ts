@@ -22,7 +22,7 @@ export class AutomationTestHomePage extends BasePage {
       DatePicker3StartDate: "#start-date",
       DatePicker3EndDate: "#end-date",
       DatePicker3SubmitButton: ".date-picker-box > .submit-btn",
-      DatePicker3Result: "#result"
+      DatePicker3Result: "#result",
     };
   }
 
@@ -30,6 +30,8 @@ export class AutomationTestHomePage extends BasePage {
     return {
       //Side Content
       WikipediaSearchInput: "//input[@id='Wikipedia1_wikipedia-search-input']",
+      WikipediaSearchButton: "//input[@class='wikipedia-search-button']",
+      WikipediaMoreResultsButton: "//div[@id='Wikipedia1_wikipedia-search-more']/a",
     };
   }
 }
