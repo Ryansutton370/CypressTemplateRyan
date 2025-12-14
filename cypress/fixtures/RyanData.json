@@ -1,0 +1,11 @@
+{
+  "name": "Ryan Test",
+  "email": "RyanTestEmail@test.com",
+  "phone": "1231231234",
+  "address": "123 Test Address",
+  "gender": "MaleRadioButton",
+  "days": "Monday, Tuesday, Friday",
+  "country": "japan",
+  "color": "green",
+  "animal": "dog"
+}

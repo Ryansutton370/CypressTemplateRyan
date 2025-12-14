@@ -1,1 +1,5 @@
 node_modules
+gui-test-result.json
+test-output.log
+test-output.txt
+cypress-test-output.txt

@@ -5,7 +5,7 @@ Given("navigate to homepage", () => {
   cy.visit(Cypress.env("baseUrl"));
 });
 
-Then("the {string} field contains {string}", (field: string, text: string) => {
+Then("{string} field contains {string}", (field: string, text: string) => {
   CommonActions.validateFieldText(field, text);
 });
 
@@ -15,6 +15,11 @@ Then("enter {string} in the {string} field", (text: string, field: string) => {
 
 Then("click on {string}", (element: string) => {
   CommonActions.click(element);
+});
+
+Then("select {string} option from {string}", (option: string, dropdown: string) => {
+  const value = option.toLowerCase();
+  CommonActions.selectOption(dropdown, value);
 });
 
 Then("the URL contains {string}", (text: string) => {

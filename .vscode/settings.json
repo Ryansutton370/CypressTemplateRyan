@@ -13,5 +13,16 @@
   ],
   "cucumber.glue": [
     "cypress/support/step_definitions/**/*.ts"
-  ]
+  ],
+  "editor.suggest.showStatusBar": false,
+  "editor.suggest.maxVisibleSuggestions": 3,
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "editor.suggestOnTriggerCharacters": false,
+  "[typescript]": {
+    "editor.suggest.enabled": false
+  }
 }

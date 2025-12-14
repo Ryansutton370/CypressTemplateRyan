@@ -9,6 +9,7 @@ export interface ActionsInterface {
   click(locator: string): void;
   shouldBeVisible(locator: string): void;
   shouldNotExist(locator: string): void;
+  selectOption(locator: string, value: string): void;
 }
 
 // Strongly-typed selector kinds to avoid magic strings throughout the codebase.
@@ -21,6 +22,7 @@ export enum ActionKind {
   Click = 'click',
   ShouldBeVisible = 'shouldBeVisible',
   ShouldNotExist = 'shouldNotExist',
+  SelectOption = 'selectOption',
 }
 
 /**
@@ -80,6 +82,31 @@ export class BaseActions implements ActionsInterface {
     cy.log(`Checking does not exist${this.label ? ' (' + this.label + ')' : ''}: ${locator}`);
     this.selectFn(locator)
       .should('not.exist');
+  }
+
+  selectOption(locator: string, value: string): void {
+    cy.log(`Selecting option${this.label ? ' (' + this.label + ')' : ''}: ${locator} -> ${value}`);
+    this.selectFn(locator)
+      .scrollIntoView()
+      .then(($el) => {
+        // For native select elements, try to select by value or text
+        if ($el.is('select')) {
+          // Check if option with this value exists, otherwise find by text
+          const $option = $el.find(`option[value="${value}"]`);
+          if ($option.length > 0) {
+            cy.wrap($el).select(value, { force: true });
+          } else {
+            // Try to find option by text content
+            cy.wrap($el).find('option').contains(value, { matchCase: false }).then(($option) => {
+              cy.wrap($el).select($option.val() as string, { force: true });
+            });
+          }
+        } else {
+          // For custom dropdowns, click and then find the option
+          cy.wrap($el).click({ force: true });
+          cy.get('[role="option"]').contains(new RegExp(`^${value}$`, 'i')).click({ force: true });
+        }
+      });
   }
 }
 

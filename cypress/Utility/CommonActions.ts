@@ -69,6 +69,10 @@ export class CommonActions {
         cy.log("Not exist check using: " + selectorType);
         act.shouldNotExist(Locator);
       },
+      [ActionKind.SelectOption]: (act: ActionsInterface) => {
+        cy.log("Select option using: " + selectorType);
+        act.selectOption(Locator, text);
+      },
     };
 
     // Lookup the handler by the explicit actionKind and invoke it.
@@ -100,6 +104,10 @@ export class CommonActions {
 
   public static shouldNotExist(Locator: string): void {
     this.getLocator(Locator, ActionKind.ShouldNotExist);
+  }
+
+  public static selectOption(Locator: string, value: string): void {
+    this.getLocator(Locator, ActionKind.SelectOption, value);
   }
 
 }
