@@ -12,4 +12,8 @@ export default defineConfig({
     specPattern: "cypress/integration/**/features/*.feature",
     experimentalRunAllSpecs: true,
   },
+  env: {
+    filterSpecs: true,
+    omitFiltered: true,
+  },
 });

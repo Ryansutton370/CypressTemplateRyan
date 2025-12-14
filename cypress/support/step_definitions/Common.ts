@@ -17,6 +17,10 @@ Given("navigate to homepage", () => {
   cy.visit(Cypress.env("baseUrl"));
 });
 
+Given("go to url {string}", (url: string) => {
+  cy.visit(url);
+});
+
 Then("{string} field contains {string}", (field: string, text: string) => {
   CommonActions.validateFieldText(field, text);
 });
