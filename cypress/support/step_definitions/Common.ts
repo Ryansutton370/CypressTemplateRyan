@@ -1,6 +1,18 @@
 import { Given, Then } from "@badeball/cypress-cucumber-preprocessor";
 import { CommonActions } from "cypress/Utility/CommonActions";
 
+/**
+ * Common Step Definitions
+ * 
+ * This file contains common step definitions for Cypress tests using Cucumber.
+ * Generally applicable steps such as navigation, text entry, clicking elements,
+ * and validations are defined here.
+ * 
+ * In particular, "atomic" actions replicating user interactions are implemented here.
+ * Steps that are more specific to certain pages or features should be defined
+ * in their respective step definition files.
+ */
+
 Given("navigate to homepage", () => {
   cy.visit(Cypress.env("baseUrl"));
 });

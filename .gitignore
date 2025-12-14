@@ -3,3 +3,4 @@ gui-test-result.json
 test-output.log
 test-output.txt
 cypress-test-output.txt
+cypress/screenshots/LinkToWiki.feature/Link from homepage to Wiki page -- Look up Cypress on Wikipedia (failed).png
