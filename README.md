@@ -2,15 +2,22 @@
 
 A comprehensive Cypress test automation framework using the Page Object Model (POM) pattern with Cucumber/Gherkin BDD syntax for both UI and API testing.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CodeQL](https://github.com/Ryansutton370/CypressTemplateRyan/workflows/CodeQL%20Analysis/badge.svg)](https://github.com/Ryansutton370/CypressTemplateRyan/actions?query=workflow%3A%22CodeQL+Analysis%22)
+
 ## Table of Contents
 
 - [Overview](#overview)
+- [Contributing](#contributing)
 - [Project Structure](#project-structure)
 - [Architecture & Patterns](#architecture--patterns)
 - [Getting Started](#getting-started)
 - [How to Add New Tests](#how-to-add-new-tests)
 - [Configuration](#configuration)
 - [Running Tests](#running-tests)
+- [Security](#security)
+- [Code of Conduct](#code-of-conduct)
+- [License](#license)
 
 ## Overview
 
@@ -21,6 +28,33 @@ This template provides a structured approach to test automation with:
 - **API testing capabilities** with CRUD operations
 - **Data-driven testing** support via fixtures
 - **TypeScript** for type safety and better IDE support
+
+## Contributing
+
+**This repository is public and forkable!** We welcome contributions from the community. The `main` branch is protected and requires pull requests with code review and passing CI checks.
+
+### Quick Contribution Workflow
+
+1. **Fork** this repository to your GitHub account
+2. **Clone** your fork locally: `git clone https://github.com/YOUR-USERNAME/CypressTemplateRyan.git`
+3. **Create a branch** for your changes: `git checkout -b feature/your-feature-name`
+4. **Make your changes** and commit with signoff: `git commit -s -m "feat: your change"`
+5. **Push** to your fork: `git push origin feature/your-feature-name`
+6. **Open a Pull Request** from your fork to this repository's `main` branch
+
+### Branch Protection
+
+The `main` branch is protected and requires:
+- Pull requests for all changes (no direct pushes)
+- At least 1 approving review from code owners
+- All CI status checks to pass (including CodeQL analysis)
+- **Administrators must follow the same rules** - no exceptions
+
+### More Information
+
+- 📖 **Detailed contributing guide**: [CONTRIBUTING.md](CONTRIBUTING.md)
+- 🔒 **Security policy**: [SECURITY.md](SECURITY.md)
+- 📜 **Code of Conduct**: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 
 ## Project Structure
 
@@ -400,10 +434,27 @@ Scenario Outline: Test with multiple data sets
 
 ## Support
 
-For issues or questions about this template, please refer to the Cypress documentation:
-- [Cypress Documentation](https://docs.cypress.io/)
-- [Cucumber Preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor)
+For issues or questions about this template:
+- 📖 Check the [Contributing Guide](CONTRIBUTING.md)
+- 🐛 [Open an issue](https://github.com/Ryansutton370/CypressTemplateRyan/issues/new/choose) using our templates
+- 📚 Refer to the Cypress documentation:
+  - [Cypress Documentation](https://docs.cypress.io/)
+  - [Cucumber Preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor)
+
+## Security
+
+Security is important to us. If you discover a security vulnerability, please report it privately through:
+- GitHub Security Advisories (preferred): [Report a vulnerability](https://github.com/Ryansutton370/CypressTemplateRyan/security)
+- Contact the repository owner: [@Ryansutton370](https://github.com/Ryansutton370)
+
+For more information, see our [Security Policy](SECURITY.md).
+
+## Code of Conduct
+
+This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [@Ryansutton370](https://github.com/Ryansutton370).
 
 ## License
 
-This is a template project for test automation purposes.
+This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
+
+Copyright (c) 2025 Ryansutton370

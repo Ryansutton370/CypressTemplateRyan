@@ -1,0 +1,6 @@
+# CODEOWNERS file for CypressTemplateRyan
+# This file defines individuals or teams that are responsible for code in this repository.
+# When a pull request is opened, the code owners are automatically requested for review.
+
+# Default owner for everything in the repo
+* @Ryansutton370
