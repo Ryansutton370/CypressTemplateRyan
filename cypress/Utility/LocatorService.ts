@@ -1,6 +1,6 @@
-import { WikipediaPage } from "cypress/PageObjects/Wikipedia";
-import { WikiArticlePage } from "cypress/PageObjects/WikiArticlePage";
-import { HomestarPage } from "cypress/PageObjects/HomestarPage";
+import { AutomationTestHomePage } from "../PageObjects/AutomationTestHomePage";
+import { WikipediaPage } from "../PageObjects/WikipediaPage";
+
 
 /**
  * Service responsible for resolving a locator key into a selector string
@@ -9,9 +9,10 @@ import { HomestarPage } from "cypress/PageObjects/HomestarPage";
  */
 export class LocatorService {
   private static pageMap = new Map<string, any>([
-    ["", WikipediaPage],
-    ["wiki", WikiArticlePage],
-    ["homestarunner", HomestarPage]
+    ["", AutomationTestHomePage],
+    ["w", WikipediaPage],
+    ["wiki", WikipediaPage],
+    
   ]);
 
   private static overridePage?: string;

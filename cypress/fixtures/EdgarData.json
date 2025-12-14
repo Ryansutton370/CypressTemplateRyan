@@ -1,0 +1,11 @@
+{
+  "name": "Edgar Test",
+  "email": "EdgarTestEmail@test.com",
+  "phone": "1112223333",
+  "address": "44 Edgar Address",
+  "gender": "MaleRadioButton",
+  "days": "Tuesday",
+  "country": "australia",
+  "color": "yellow",
+  "animal": "dog"
+}

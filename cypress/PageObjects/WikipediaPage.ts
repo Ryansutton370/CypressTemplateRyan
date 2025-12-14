@@ -3,14 +3,14 @@ import { BasePage } from "cypress/PageObjects/BasePage";
 export class WikipediaPage extends BasePage {
   protected static getCSSLocators(): Record<string, string> {
     return {
-      SearchButton: "#search-form > fieldset > button",
+      ArticleLinks: "ul > li > div > div > div > a",
     };
   }
 
   protected static getXPathLocators(): Record<string, string> {
     return {
-      SearchInput: "//input[@id='searchInput']",
-      Slogan: "//h1/strong",
+      ArticleHeading: "//h1",
+      ArticleTopImage: "(//table//img)[1]"
     };
   }
 }

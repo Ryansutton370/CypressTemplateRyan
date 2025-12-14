@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "cypress run"
+  },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^24.0.0",
     "cypress": "^15.7.1",

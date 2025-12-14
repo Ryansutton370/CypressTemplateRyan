@@ -1,0 +1,11 @@
+{
+  "name": "Kelsey Test",
+  "email": "KelseyTestEmail@test.com",
+  "phone": "3213214321",
+  "address": "654 Kelsey Address",
+  "gender": "FemaleRadioButton",
+  "days": "Friday, Saturday, Sunday",
+  "country": "united kingdom",
+  "color": "red",
+  "animal": "cat"
+}
